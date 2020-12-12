@@ -2,6 +2,8 @@ body {
 	/*background-image: url("055.jpg");
 	background-size: 100vw;*/
 	margin: 0;
+	flex-direction: column;
+	display: flex;
 }
 
 .header {
@@ -9,14 +11,15 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;*/
-	height: 13vmax;
+	/*height: 13vmax;*/
 	display: flex;
+	flex-basis: auto;
 	flex-direction: column;
 	background-color: darkgreen;
 }
 
 .logo-text {
-	height: 75%;
+	height: 10vmax;
 	display: flex;
 	/*align-items: center;*/
 }
@@ -84,4 +87,12 @@ body {
 
 .nav a:hover {
 	color: peru;
+}
+
+.content-section{
+	flex: 1;
+}
+
+.title {
+	font-size: 4vmax;
 }
