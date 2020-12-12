@@ -2,6 +2,7 @@ body {
 	/*background-image: url("055.jpg");
 	background-size: 100vw;*/
 	margin: 0;
+    height:100%;
 	flex-direction: column;
 	display: flex;
 }
@@ -13,7 +14,6 @@ body {
 	background-position: center;*/
 	/*height: 13vmax;*/
 	display: flex;
-	flex-basis: auto;
 	flex-direction: column;
 	background-color: darkgreen;
 }
@@ -21,11 +21,9 @@ body {
 .logo-text {
 	height: 10vmax;
 	display: flex;
-	/*align-items: center;*/
 }
 
 .logo {
-	float: left;
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -37,9 +35,7 @@ body {
 }
 
 .header-text {
-	flex-grow: 1;
-	height: 100%;
-	float: right;
+	flex: 1;
 	font-size:5vmin;
 	font-family: "calibri", sans-serif;
 	color: gold;
@@ -47,6 +43,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	/*position: relative;*/
 }
 
@@ -89,10 +86,39 @@ body {
 	color: peru;
 }
 
-.content-section{
-	flex: 1;
+.content-section {
+	display: flex;
 }
 
-.title {
-	font-size: 4vmax;
+.left {
+	flex: 2;
+	padding: 0 1vw;
+	border-radius: 10px;
+	border-top: 5vh solid white;
+	margin: 0.5vmax;
+	font-family: "calibri", sans-serif;
+	font-size: 1em;
+	color: navy;
+	text-align: center;
+}
+
+.twitter-container {
+	border: 5px solid turquoise;
+	border-radius: 5px;
+}
+
+.left h3 {
+	font-weight: 700;
+	margin: 10px;
+}
+
+.centre {
+	flex: 5;
+	/*background-color: navy;*/
+	height: 1000px;
+}
+
+.right {
+	flex: 2;
+	/*background-color: grey;*/
 }
