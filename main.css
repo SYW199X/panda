@@ -5,6 +5,7 @@ body {
     height:100%;
 	flex-direction: column;
 	display: flex;
+	font-family: "calibri", sans-serif;
 }
 
 .header {
@@ -114,8 +115,32 @@ body {
 
 .centre {
 	flex: 5;
+	/*white-space: pre-line;*/
 	/*background-color: navy;*/
-	height: 1000px;
+	display: flex;
+	flex-direction: column;
+	/*height: 1000px;*/
+	font-size: 1.1em;
+	text-align: justify;
+	padding:  5vh 10vw 0 3vw;
+	min-width: 500px;
+	align-items: center;
+}
+
+.centre img {
+	object-fit: contain;
+	max-width: 100%;
+	border-radius: 5px;
+}
+
+.centre p {
+	/*text-align-last: justify;*/
+	margin: 5vh 0 0 0;
+	font-weight: 700;
+}
+
+.centre span {
+	color: crimson;
 }
 
 .right {
