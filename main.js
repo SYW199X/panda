@@ -3,6 +3,7 @@ window.onscroll = function() {myFunction()};
 
 // Get the navbar
 var navbar = document.getElementById("navbar");
+var header = document.getElementById("header");
 
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
@@ -11,7 +12,9 @@ var sticky = navbar.offsetTop;
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
+    header.classList.add("header-sticky")
   } else {
     navbar.classList.remove("sticky");
+    header.classList.remove("header-sticky")
   }
 }

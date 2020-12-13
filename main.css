@@ -17,6 +17,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: darkgreen;
+	/*height: 400px;*/
 }
 
 .logo-text {
@@ -71,11 +72,12 @@ body {
 .sticky {
 	position: fixed;
 	top: 0;
+	border-top: 2px solid black;
 	width: 100%;
 }
 
-.sticky + .content-section {
-	padding-top: 60px;
+.header-sticky {
+	height: calc(10vmax + 14px + 1.2em);
 }
 
 .nav * {
