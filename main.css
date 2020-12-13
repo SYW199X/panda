@@ -44,7 +44,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+	margin-left: -10vw;
 	/*position: relative;*/
 }
 
@@ -68,6 +68,16 @@ body {
 	border-color: transparent, transparent, black, transparent;
 }
 
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.sticky + .content-section {
+	padding-top: 60px;
+}
+
 .nav * {
 	/*display: inline-block;*/
 	color: royalblue;
@@ -84,7 +94,7 @@ body {
 }
 
 .nav a:hover {
-	color: peru;
+	color: turquoise;
 }
 
 .content-section {
@@ -115,6 +125,7 @@ body {
 
 .centre {
 	flex: 5;
+	height: 1000px;
 	/*white-space: pre-line;*/
 	/*background-color: navy;*/
 	display: flex;
