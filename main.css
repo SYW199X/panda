@@ -16,8 +16,8 @@ body {
 	/*height: 13vmax;*/
 	display: flex;
 	flex-direction: column;
-	background-color: darkgreen;
-	/*height: 400px;*/
+	/*background-color: darkgreen;*/
+	background-color: chocolate;
 }
 
 .logo-text {
@@ -40,7 +40,7 @@ body {
 	flex: 1;
 	font-size:5vmin;
 	font-family: "calibri", sans-serif;
-	color: gold;
+	color: beige;
 	white-space: nowrap;
 	display: flex;
 	justify-content: center;
@@ -103,31 +103,23 @@ body {
 	display: flex;
 }
 
-.left {
-	flex: 3;
-	padding: 0 1vw;
-	border-radius: 10px;
-	border-top: 5vh solid white;
-	margin: 0.5vmax;
-	font-family: "calibri", sans-serif;
-	font-size: 1em;
-	color: navy;
+.about-content-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	padding: 5vh 0 0 20vw;
+	font-size: 2em;
+}
+
+.about {
 	text-align: center;
 }
 
-.twitter-container {
-	border: 5px solid turquoise;
-	border-radius: 5px;
-}
-
-.left h3 {
-	font-weight: 700;
-	margin: 10px;
-}
-
-.centre {
+.left {
 	flex: 5;
-	height: 1000px;
+	height: 600px;
 	/*white-space: pre-line;*/
 	/*background-color: navy;*/
 	display: flex;
@@ -135,28 +127,49 @@ body {
 	/*height: 1000px;*/
 	font-size: 1.1em;
 	text-align: justify;
-	padding:  5vh 10vw 0 3vw;
+	padding:  5vh 5vw 0 10vw;
 	min-width: 500px;
 	align-items: center;
 }
 
-.centre img {
+.left img {
 	object-fit: contain;
 	max-width: 100%;
 	border-radius: 5px;
 }
 
-.centre p {
+.left p {
 	/*text-align-last: justify;*/
 	margin: 5vh 0 0 0;
 	font-weight: 700;
 }
 
-.centre span {
+.left span {
 	color: crimson;
 }
 
+.centre {
+	flex: 3;
+	padding: 0 1vw;
+	border-radius: 10px;
+	border-top: 5vh solid white;
+	margin: 0.5vmax 5vmax 0 0.5vmax;
+	font-family: "calibri", sans-serif;
+	font-size: 1em;
+	color: navy;
+	text-align: center;
+}
+
+.twitter-container {
+	border: 3px solid grey;
+	border-radius: 2px;
+}
+
+.centre h3 {
+	font-weight: 700;
+	margin: 10px;
+}
+
 .right {
-	flex: 2;
 	/*background-color: grey;*/
 }
