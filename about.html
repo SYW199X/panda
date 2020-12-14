@@ -2,9 +2,14 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<script
+	src="https://code.jquery.com/jquery-3.5.1.js"
+	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+	crossorigin="anonymous"></script>
+	<link rel="icon" type="image/png" sizes="50x50" href="emblem1.png">
 </head>
 <body>
-	<div class="header">
+	<div class="header" id="header">
 		<title>Carnivorous Panda</title>
 		<div class="logo-text">
 			<div class="logo">
@@ -16,7 +21,7 @@
 			</div>
 		</div>
 			
-		<div class="nav">
+		<div class="nav" id="navbar">
 			<a href="main.html">Home</a>
 			<a href="GF.html">Ground Force</a>
 			<a href="navy.html">Navy</a>
@@ -28,12 +33,41 @@
 	
 	<div class="about-content-section">
 		<div class="left-buffer"></div>
-		<p class="about">
-			<span class="title">About Us</span><br>
-			nigga nigga nigga nigga nigga niggasaurus
-		</p>
+			<div class="about">
+				<p class="title">About Us</p>
+				<p>The Chinese <span>People's Liberation Army (PLA)</span> is the armed forces of the 
+				People's Republic of China. It is comprised of five service branches; the Ground Force, Navy,
+				Air Force, Rocket Force, and Strategic Support Force, and totals two million active
+				personnel. In recent decades, the PLA has seen tremendous modernisation and has 
+				enjoyed a vast increase in combat potential despite being more than halved in size
+				from over four million since 1980.</p>
+				<p>The immense changes to the PLA has multiple implications. One, the world is increasingly 
+				curious	about the PLA as power begets attention, and the PLA and the China as a whole is becoming
+				more powerful. Two, the PLA is changing rapidly and the few who could be bothered to put in the 
+				effort to understand the PLA in the first place quickly find their hard-earned understanding 
+				outdated. Three, owing to point one, many are finding out how difficult it is to get accurate 
+				information about the PLA due to the language barrier and the PLA's inherent opaqueness. These 
+				factors coalesce into sufficient cause for the establishment of this website which aims to
+				provide accessible and comprehensible up-to-date information about the PLA.</p>
+				<p>This website was and is built, populated, and maintained by volunteers. If you would like to
+				contact us, please complete and submit the form below.</p>
+				<form>
+					<!-- <div class="resizing-input">
+		    			First: <input type="text" placeholder="placeholder"/>
+					    <span  style="display:none"></span>
+					</div><br>
+					<div class="resizing-input">
+					    Second: <input type="text" placeholder="placeholder"/>
+					    <span  style="display:none"></span>
+					</div> -->
+					<input type="text" class="email" name="email" placeholder="Enter your email here"><br>
+					<input type="text" class="message" name="message" placeholder="Enter your message here">
+				</form>
+			</div>
+
 		<div class="right-buffer"></div>
 	</div>
 	
 </body>
+	<script src="main.js"></script>
 </html>

@@ -16,13 +16,13 @@ body {
 	/*height: 13vmax;*/
 	display: flex;
 	flex-direction: column;
-	/*background-color: darkgreen;*/
-	background-color: chocolate;
+	background-color: black;
 }
 
 .logo-text {
 	height: 10vmax;
 	display: flex;
+	justify-content: space-between;
 }
 
 .logo {
@@ -45,8 +45,11 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-left: -10vw;
 	/*position: relative;*/
+}
+
+.right-space {
+	width: 10vmax;
 }
 
 /*Using flex precludes this method*/
@@ -112,9 +115,37 @@ body {
 }
 
 .about {
-	margin-top: 5vh;
 	flex: 3;
+	text-align: justify;
+	min-width: 600px;
+	height: 800px;
+/*	display: flex;
+	flex-direction: column;
+*/}
+
+.about p:first-child {
+	/*margin: 0;*/
+	padding: 0;
 }
+
+.about p {
+	/*padding: 100px;*/
+}
+
+.about span {
+	color: crimson;
+}
+
+.about .message {
+	border: 2px solid black;
+}
+
+/*.resizing-input input, .resizing-input span {
+    font-size: 12px;
+    font-family: Sans-serif;
+    white-space: pre;
+    padding: 5px;
+}*/
 
 .right-buffer {
 	flex: 2;
@@ -123,10 +154,6 @@ body {
 .title {
 	padding: 5vh 0 0 0vw;
 	font-size: 2em;
-}
-
-.about {
-	text-align: justify;
 }
 
 .left {
@@ -144,11 +171,11 @@ body {
 	align-items: center;
 }
 
-.left img {
+/*.left img {
 	object-fit: contain;
 	max-width: 100%;
 	border-radius: 5px;
-}
+}*/
 
 .left p {
 	/*text-align-last: justify;*/
@@ -174,7 +201,7 @@ body {
 
 .twitter-container {
 	border: 3px solid grey;
-	border-radius: 2px;
+	border-radius: 3px;
 }
 
 .centre h3 {
