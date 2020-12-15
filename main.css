@@ -39,7 +39,7 @@ body {
 .header-text {
 	flex: 1;
 	font-size:5vmin;
-	font-family: "calibri", sans-serif;
+	font-family: "arial", sans-serif;
 	color: beige;
 	white-space: nowrap;
 	display: flex;
@@ -125,19 +125,36 @@ body {
 
 .about p:first-child {
 	/*margin: 0;*/
-	padding: 0;
-}
-
-.about p {
-	/*padding: 100px;*/
+	padding: 3vh 0 0 0;
 }
 
 .about span {
 	color: crimson;
 }
 
+.about .email {
+	margin-top: 5vh;
+	border: 1px solid grey;
+	width: 50%;
+	height: 1.5em;
+	min-width: 20ch;
+	font-family: "arial", sans-serif;
+}
+
 .about .message {
-	border: 2px solid black;
+	font-family: "arial", sans-serif;
+	border: 1px solid grey;
+	width: 100%;
+	height: 30vh;
+	margin: 3vh 0 0 0;
+}
+
+.about .submit {
+	margin-bottom: 20vh;
+}
+
+.about .message, .about .email {
+	border-radius: 2px;
 }
 
 /*.resizing-input input, .resizing-input span {
@@ -166,9 +183,46 @@ body {
 	/*height: 1000px;*/
 	font-size: 1.1em;
 	text-align: justify;
-	padding:  5vh 5vw 0 10vw;
+	padding:  3vh 3vw 0 5vw;
 	min-width: 500px;
 	align-items: center;
+}
+
+.left h2 {
+	font-size: calc(2.5vmax+10px);
+	color: navy;
+}
+
+.post-section {
+	margin: 3vh 0 0 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.post {
+	height: 20vmax;
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	/*text-overflow: ellipsis;*/
+	overflow: hidden;
+}
+
+.post img {
+	width: 30%;
+	height: 100%;
+	border-right: 2px solid black;
+	float: left;
+	object-fit: cover;
+	overflow: hidden;
+	margin-right: calc(10px + 2vmax);
+}
+
+.post h3, .post p {
+	/*position: relative;*/
+	color: darkslategrey;
+	padding-right: calc(10px + 2vmax);
+	overflow: auto;
 }
 
 /*.left img {
@@ -179,8 +233,8 @@ body {
 
 .left p {
 	/*text-align-last: justify;*/
-	margin: 5vh 0 0 0;
-	font-weight: 700;
+	margin: 0.5vmax 0 0 0;
+	font-weight: 400
 }
 
 .left span {
@@ -188,7 +242,7 @@ body {
 }
 
 .centre {
-	flex: 3;
+	flex: 2;
 	padding: 0 1vw;
 	border-radius: 10px;
 	border-top: 5vh solid white;
@@ -200,7 +254,7 @@ body {
 }
 
 .twitter-container {
-	border: 3px solid grey;
+	border: 2px solid grey;
 	border-radius: 3px;
 }
 
