@@ -16,17 +16,19 @@ body {
 	/*height: 13vmax;*/
 	display: flex;
 	flex-direction: column;
-	background-color: black;
+	/*background-color: darkslategrey;*/
+	background-color: #4E6E64;
 }
 
 .logo-text {
-	height: 10vmax;
+	height: 130px;
 	display: flex;
 	justify-content: space-between;
 }
 
 .logo {
 	height: 100%;
+	margin-left: 3vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -40,7 +42,7 @@ body {
 	flex: 1;
 	font-size:5vmin;
 	font-family: "arial", sans-serif;
-	color: beige;
+	color: white;
 	white-space: nowrap;
 	display: flex;
 	justify-content: center;
@@ -80,7 +82,7 @@ body {
 }
 
 .header-sticky {
-	height: calc(10vmax + 14px + 1.2em);
+	height: calc(130px + 14px + 1.2em);
 }
 
 .nav * {
@@ -175,7 +177,7 @@ body {
 
 .left {
 	flex: 5;
-	height: 600px;
+	/*height: 600px;*/
 	/*white-space: pre-line;*/
 	/*background-color: navy;*/
 	display: flex;
@@ -202,7 +204,8 @@ body {
 }
 
 .post {
-	height: 15vmax;
+	margin: 10px 0 0 0;
+	height: 210px;
 	border: 2px solid lightgrey;
 	border-radius: 10px;
 	overflow: hidden;
@@ -211,7 +214,7 @@ body {
 .post img {
 	width: 30%;
 	height: 100%;
-	border-right: 2px solid slategrey;
+	/*border-right: 2px solid black;*/
 	float: left;
 	object-fit: cover;
 	overflow: hidden;
@@ -264,7 +267,7 @@ body {
 }
 
 .twitter-container {
-	border: 2px solid grey;
+	border: 3px solid lightgrey;
 	border-radius: 3px;
 }
 
@@ -275,4 +278,14 @@ body {
 
 .right {
 	/*background-color: grey;*/
+}
+
+.footer {
+	margin: 20vh 0 0 0;
+	height: 120px;
+	color: beige;
+	background-color: darkslategrey;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
