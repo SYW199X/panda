@@ -273,42 +273,63 @@ body {
 .post {
 	margin: calc(10px + 3vh) 0 0 0;
 	height: 210px;
-	/* border: 2px solid lightgrey;
-	border-radius: 10px; */
-	border-bottom: 2px solid #4E6E64;
+	/* border: 2px solid lightgrey;*/
+	/* border-radius: 10px; */
+	/* border-bottom: 2px solid #4E6E64; */
 	/* border-right: 3px solid #4e6e64; */
 	/* border-bottom-right-radius: 5px; */
-	background-color: rgb(233, 233, 233);
-	border-top-right-radius: 5px;
+	/* background-color: rgb(233, 233, 233); */
 }
 
 .post img {
 	width: 30%;
 	height: 100%;
-	/*border-right: 2px solid black;*/
+	border-right: 0px solid black;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 	float: left;
 	object-fit: cover;
 	overflow: hidden;
-	margin-right: calc(5px + 1vmax);
 }
 
 .text-section {
 	height: 100%;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
+	background-color: #69857c;
+	padding-left: calc(5px + 1vmax);
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom: 10px solid #69857c;
 }
 
 .text-section h3, .text-section p {
-	color: darkslategrey;
+	color: white;
 	padding-right: calc(10px + 2vmax);
 	margin: 1vh 0 0 0;
 	text-align: justify;
 }
 
 .text-section p {
+	margin: 0;
+}
+
+.text-section h4 {
+	padding: 0;
+	margin: 1vh 0 0 0;
+	color: rgb(70, 70, 70);
+}
+
+.text-section p {
 	height: 100%;
 	overflow: scroll;
 	overflow-x: hidden;
+	overscroll-behavior: none;
+}
+
+.text-section ::-webkit-scrollbar {
+	width: 0;
 }
 
 .post a {
@@ -361,6 +382,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	border-radius: 5px;
 }
 
 .search-container {
@@ -374,6 +396,8 @@ body {
 	width: 90%;
 	border: none;
 	padding: 0;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
 }
 
 #searchBar:focus {
@@ -392,6 +416,8 @@ body {
 	height: 100%;
 	min-width: 25px;
 	background-repeat: no-repeat;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
 }
 
 #searchButton:hover {
@@ -399,9 +425,9 @@ body {
 }
 
 .twitter-container {
-	border: 2px solid #4e6e64;
+	border: 2px solid lightgrey;
 	/* border-radius: 5px; */
-	margin: 3vh 0 0 0;
+	margin: 1vh 0 0 0;
 }
 
 .centre-home h3 {
