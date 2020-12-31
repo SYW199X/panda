@@ -17,7 +17,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	/*background-color: darkslategrey;*/
-	background-color: #4E6E64;
+	background-color: #69857c;
 }
 
 .logo-text {
@@ -142,7 +142,7 @@ body {
 
 .about {
 	flex: 5;
-	font-size: 1.1em;
+	font-size: 1.5vw;
 	text-align: justify;
 	min-width: 500px;
 	height: 800px;
@@ -264,17 +264,22 @@ body {
 }
 
 .post-section {
-	margin: 10vh 0 0 0;
+	margin: 5vh 0 0 0;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 }
 
 .post {
-	margin: 10px 0 0 0;
+	margin: calc(10px + 3vh) 0 0 0;
 	height: 210px;
-	border: 2px solid lightgrey;
-	border-radius: 10px;
+	/* border: 2px solid lightgrey;
+	border-radius: 10px; */
+	border-bottom: 2px solid #4E6E64;
+	/* border-right: 3px solid #4e6e64; */
+	/* border-bottom-right-radius: 5px; */
+	background-color: rgb(233, 233, 233);
+	border-top-right-radius: 5px;
 }
 
 .post img {
@@ -284,7 +289,7 @@ body {
 	float: left;
 	object-fit: cover;
 	overflow: hidden;
-	margin-right: calc(10px + 2vmax);
+	margin-right: calc(5px + 1vmax);
 }
 
 .text-section {
@@ -296,13 +301,14 @@ body {
 .text-section h3, .text-section p {
 	color: darkslategrey;
 	padding-right: calc(10px + 2vmax);
-	margin: 1.5vh 0 0 0;
+	margin: 1vh 0 0 0;
 	text-align: justify;
 }
 
 .text-section p {
 	height: 100%;
 	overflow: scroll;
+	overflow-x: hidden;
 }
 
 .post a {
@@ -349,9 +355,52 @@ body {
 	text-align: center;
 }
 
+.search-section {
+	background-color: lightgrey;
+	margin: 7vh 0 10vh 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.search-container {
+	display: flex;
+	margin: 0 0 10px 0;
+	padding: 0;
+	width: 90%;
+}
+
+#searchBar {
+	width: 90%;
+	border: none;
+	padding: 0;
+}
+
+#searchBar:focus {
+	outline: none;
+}
+
+#searchButton {
+	margin: 0;
+	padding: 5px 0;
+	border: none;
+	background-color: white;
+	background-image: url("search.png");
+	background-position: center;
+	background-size: contain;
+	flex: 1;
+	height: 100%;
+	min-width: 25px;
+	background-repeat: no-repeat;
+}
+
+#searchButton:hover {
+	cursor: pointer;
+}
+
 .twitter-container {
-	border: 3px solid lightgrey;
-	border-radius: 5px;
+	border: 2px solid #4e6e64;
+	/* border-radius: 5px; */
 	margin: 3vh 0 0 0;
 }
 
