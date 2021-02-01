@@ -425,7 +425,7 @@ body {
 }
 
 .twitter-container {
-	border: 2px solid lightgrey;
+	/* border: 1px solid black; */
 	/* border-radius: 5px; */
 	margin: 1vh 0 0 0;
 }
