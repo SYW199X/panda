@@ -1,0 +1,53 @@
+.about-content-section {
+	display: flex;
+}
+
+.about {
+	flex: 5;
+	font-size: 1.5vw;
+	text-align: justify;
+	min-width: 500px;
+	height: 800px;
+	padding: 1vh 1vw;
+/*	display: flex;
+	flex-direction: column;
+*/}
+
+.about h2 {
+	font-size: calc(2vmax + 10px);
+	color: darkslategrey;
+	margin-bottom: 2vh;
+	font-weight: 500;
+}
+
+.about p:first-child {
+	/*margin: 0;*/
+	padding: 3vh 0 0 0;
+}
+
+.email {
+	margin-top: 5vh;
+	border-style: solid;
+	border-width: 0 0 2px 0;
+	width: 100%;
+	height: 1.5em;
+	min-width: 20ch;
+	font-family: "arial", sans-serif;
+}
+
+.message {
+	font-family: "arial", sans-serif;
+	border-style: solid;
+	border-width: 0 0 2px 0;
+	width: 100%;
+	margin-top: 5vh;
+	height: 1.5em;
+}
+
+.message:focus, .email:focus {
+	outline-width: 0;
+}
+
+.about .submit {
+	margin-bottom: 20vh;
+}
