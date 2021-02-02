@@ -93,10 +93,8 @@
 }
 
 .post h3:hover {
-	text-decoration: underline darkslategrey dotted;
-	text-underline-position: under;
-	color: grey;
-	/*transition: 0.25s;*/
+	text-decoration: underline dotted;
+    text-underline-position: under;
 }
 
 .left-home p {
