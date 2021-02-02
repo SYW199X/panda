@@ -113,10 +113,6 @@ body {
 	display: flex;
 }
 
-.about-content-section {
-	display: flex;
-}
-
 .left-buffer {
 	flex: 2;
 }
@@ -139,30 +135,6 @@ body {
 .menu h2 {
 	margin-left: 25%;
 }
-
-.about {
-	flex: 5;
-	font-size: 1.5vw;
-	text-align: justify;
-	min-width: 500px;
-	height: 800px;
-	padding: 1vh 1vw;
-/*	display: flex;
-	flex-direction: column;
-*/}
-
-.about h2 {
-	font-size: calc(2vmax + 10px);
-	color: darkslategrey;
-	margin-bottom: 2vh;
-	font-weight: 500;
-}
-
-.about p:first-child {
-	/*margin: 0;*/
-	padding: 3vh 0 0 0;
-}
-
 
 .email {
 	margin-top: 5vh;
