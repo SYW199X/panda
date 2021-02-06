@@ -40,7 +40,7 @@ body {
 
 .header-text {
 	flex: 1;
-	font-size:5vmin;
+	font-size: 5vmin;
 	font-family: "arial", sans-serif;
 	color: white;
 	white-space: nowrap;
@@ -115,6 +115,7 @@ body {
 
 .left-buffer {
 	flex: 2;
+	box-sizing: border-box;
 }
 
 .menu {
@@ -136,33 +137,6 @@ body {
 	margin-left: 25%;
 }
 
-.email {
-	margin-top: 5vh;
-	border-style: solid;
-	border-width: 0 0 2px 0;
-	width: 100%;
-	height: 1.5em;
-	min-width: 20ch;
-	font-family: "arial", sans-serif;
-}
-
-.message {
-	font-family: "arial", sans-serif;
-	border-style: solid;
-	border-width: 0 0 2px 0;
-	width: 100%;
-	margin-top: 5vh;
-	height: 1.5em;
-}
-
-.message:focus, .email:focus {
-	outline-width: 0;
-}
-
-.about .submit {
-	margin-bottom: 20vh;
-}
-
 /*.resizing-input input, .resizing-input span {
     font-size: 12px;
     font-family: Sans-serif;
@@ -174,7 +148,7 @@ body {
 	flex: 2;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 	.right-buffer {
 		flex: 0;
 	}
@@ -186,6 +160,7 @@ body {
 		min-width: 300px;
 		font-size: 4vw;
 	}
+
 }
 
 .title {
@@ -195,9 +170,10 @@ body {
 
 .left {
 	flex: 5;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	font-size: 1.5vw;
+	font-size: 17px;
 	text-align: justify;
 	padding:  1vh 1vw 0 1vw;
 	min-width: 500px;

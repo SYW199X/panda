@@ -3,15 +3,23 @@
 }
 
 .about {
-	flex: 5;
-	font-size: 1.5vw;
+    flex: 5;
+    box-sizing: border-box;
+	font-size: 17px;
 	text-align: justify;
-	min-width: 500px;
+	min-width: 650px;
 	height: 800px;
-	padding: 1vh 1vw;
+	padding: 1vh 0;
 /*	display: flex;
 	flex-direction: column;
 */}
+
+@media (max-width: 700px) {
+    .about {
+        min-width: 300px;
+    }
+}
+
 
 .about h2 {
 	font-size: calc(2vmax + 10px);
@@ -25,8 +33,14 @@
 	padding: 3vh 0 0 0;
 }
 
+.text-box {
+    background-color: lightgrey;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .email {
-	margin-top: 5vh;
+	margin-top: 2vh;
 	border-style: solid;
 	border-width: 0 0 2px 0;
 	width: 100%;
@@ -41,7 +55,7 @@
 	border-width: 0 0 2px 0;
 	width: 100%;
 	margin-top: 5vh;
-	height: 1.5em;
+	/* height: 1.5em; */
 }
 
 .message:focus, .email:focus {
