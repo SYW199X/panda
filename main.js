@@ -2,7 +2,7 @@
 window.onscroll = function() {myFunction()};
 
 // Get the navbar
-const navbar = document.getElementById("navbar");
+const navbar = document.querySelector(".nav");
 const header = document.querySelector('.logo-text');
 
 // Get the offset position and height of the navbar at load and resize
