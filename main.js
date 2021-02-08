@@ -1,5 +1,5 @@
 // When the user scrolls the page, execute myFunction
-// window.onscroll = function() {myFunction()};
+window.onscroll = function() {myFunction()};
 
 // Get the navbar
 const navbar = document.getElementById("navbar");
@@ -20,9 +20,8 @@ window.onkeydown = (e) => {
     // navbar.style.position = 'fixed';
     // navbar.style.width = '100%';
     navbar.classList.add('sticky');
-    // let str = `calc(${navHeight}px + 20vh)`;
-    // ^^^^ problem statement
-    header.style.height = '100px';
+    let str = sticky + navHeight;
+    header.style.height = `170px`;
   } else if (e.keyCode == 84) {
     // navbar.style.position = '';
     // navbar.style.width = '';
