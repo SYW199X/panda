@@ -15,7 +15,7 @@ window.onresize = () => {
 
 window.onkeydown = (e) => {
   if (e.keyCode == 82) {
-    console.log(`scroll: ${window.pageYOffset}\nnavHeight: ${navHeight}\nnavOffset: ${sticky}\nheaderHeight: ${header.offsetHeight}`);
+    console.log(`scroll: ${window.pageYOffset}\nnavHeight: ${navHeight}\nnavOffset: ${navbar.offsetTop}\nheaderHeight: ${header.offsetHeight}`);
   } else if (e.keyCode == 81) {
     // navbar.style.position = 'fixed';
     // navbar.style.width = '100%';
@@ -31,17 +31,18 @@ window.onkeydown = (e) => {
 
 }
 
-console.log(sticky);
+console.log(`sticky: ${sticky}`);
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
+  // console.log(window.pageYOffset);
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
     // header.classList.add("header-sticky")
     let str = `calc(${navHeight}px + 20vh)`;
-    console.log(str);
+    console.log(`str: ${str}`);
     header.style.height = str;
   } else {
-    console.log("here");
+    // console.log("here");
     navbar.classList.remove("sticky");
     // header.classList.remove("header-sticky")
     header.style.height = '20vh';
