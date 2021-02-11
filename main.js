@@ -12,7 +12,7 @@ window.onresize = () => {
   sticky = window.innerHeight/5;
   navHeight = navbar.offsetHeight;
 }
-
+let flag = 0;
 window.onkeydown = (e) => {
   if (e.keyCode == 82) {//R
     console.log(`viewport: ${window.innerHeight}\nscroll: ${window.pageYOffset}\nnavHeight: ${navHeight}\nnavOffset: ${navbar.offsetTop}\nheaderHeight: ${header.offsetHeight}`);
@@ -27,6 +27,14 @@ window.onkeydown = (e) => {
     // navbar.style.width = '';
     navbar.classList.remove('sticky');
     header.style.height = '20vh';
+  } else if (e.keyCode == 69) {
+    if (flag == 0) {
+      document.querySelector('.organisation').style.display = 'block';
+      flag = 1;
+    } else {
+      document.querySelector('.organisation').style.display = 'none';
+      flag = 0;
+    }
   }
 
 }

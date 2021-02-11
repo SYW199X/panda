@@ -117,24 +117,7 @@ body {
 	box-sizing: border-box;
 }
 
-.menu {
-	margin-top: 20vh;
-}
 
-.menu ul, .menu a {
-	text-align: left;
-	font-size: 1.1em;
-	text-decoration: none;
-	margin-left: 3vw;
-	text-indent: -3vw;
-	color: #185886;
-	font-weight: 700;
-	min-width: 150px;
-}
-
-.menu h2 {
-	margin-left: 25%;
-}
 
 /*.resizing-input input, .resizing-input span {
     font-size: 12px;

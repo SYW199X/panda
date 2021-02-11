@@ -1,3 +1,44 @@
+.left-menu {
+    margin-top: 20vh;
+    margin-left: 2vw;
+}
+
+.left-menu ul, .left-menu a {
+	text-align: left;
+	font-size: 1.1em;
+	text-decoration: none;
+	/* margin-left: 3vw; */
+	/* text-indent: -3vw; */
+	color: #185886;
+	font-weight: 700;
+    min-width: 150px;
+    margin: 0;
+}
+
+.left-menu h2 {
+    /* margin-left: 25%; */
+    color: darkslategray;
+    margin-bottom: 1.5vh;
+}
+
+.organisation {
+    display: none;
+    align-self: flex-start;
+}
+
+.organisation * {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    margin: 0;
+    color: #185886;
+}
+
+.organisation h2 {
+    font-size: 24px;
+    margin-top: 4vh;
+}
+
 @media (max-width: 1000px) {
     .left-buffer {
         flex: 0;
