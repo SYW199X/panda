@@ -1,11 +1,7 @@
 .left-home {
 	flex: 5;
-	/*height: 600px;*/
-	/*white-space: pre-line;*/
-	/*background-color: navy;*/
 	display: flex;
 	flex-direction: column;
-	/*height: 1000px;*/
 	font-size: 1.1em;
 	text-align: justify;
 	padding:  2vh 3vw 0 5vw;
@@ -134,8 +130,13 @@
 }
 @media (max-width: 630px) {
     .left-home {
-        min-width: 300px;
-    }
+		padding: 0;
+		min-width: 300px;
+		font-size: 1em;
+	}
+	.post img, .text-section {
+		border-radius: 0;
+	}
 }
 
 .centre-home h3 {

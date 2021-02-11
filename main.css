@@ -85,6 +85,7 @@ body {
 
 .nav * {
 	/*display: inline-block;*/
+	width: auto;
 	color: rgb(18, 131, 106);
 	font-family: "calibri", sans-serif;
 	font-size: 1.2em;
@@ -157,6 +158,11 @@ body {
 		margin: 0 5vw;
 		min-width: 300px;
 		font-size: 4vw;
+	}
+}
+@media (max-width: 400px) {
+	.nav * {
+		font-size: 17px;
 	}
 }
 

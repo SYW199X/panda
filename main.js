@@ -14,15 +14,15 @@ window.onresize = () => {
 }
 
 window.onkeydown = (e) => {
-  if (e.keyCode == 82) {
-    console.log(`scroll: ${window.pageYOffset}\nnavHeight: ${navHeight}\nnavOffset: ${navbar.offsetTop}\nheaderHeight: ${header.offsetHeight}`);
-  } else if (e.keyCode == 81) {
+  if (e.keyCode == 82) {//R
+    console.log(`viewport: ${window.innerHeight}\nscroll: ${window.pageYOffset}\nnavHeight: ${navHeight}\nnavOffset: ${navbar.offsetTop}\nheaderHeight: ${header.offsetHeight}`);
+  } else if (e.keyCode == 81) {//Q
     // navbar.style.position = 'fixed';
     // navbar.style.width = '100%';
     navbar.classList.add('sticky');
     let str = sticky + navHeight;
     header.style.height = `170px`;
-  } else if (e.keyCode == 84) {
+  } else if (e.keyCode == 84) {//T
     // navbar.style.position = '';
     // navbar.style.width = '';
     navbar.classList.remove('sticky');
