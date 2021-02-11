@@ -27,16 +27,16 @@ window.onkeydown = (e) => {
     // navbar.style.width = '';
     navbar.classList.remove('sticky');
     header.style.height = '20vh';
-  } else if (e.keyCode == 69) {
-    if (flag == 0) {
-      document.querySelector('.organisation').style.display = 'block';
-      flag = 1;
-    } else {
-      document.querySelector('.organisation').style.display = 'none';
-      flag = 0;
-    }
-  }
-
+  } 
+  // else if (e.keyCode == 69) {
+  //   if (flag == 0) {
+  //     document.querySelector('.organisation').style.display = 'block';
+  //     flag = 1;
+  //   } else {
+  //     document.querySelector('.organisation').style.display = 'none';
+  //     flag = 0;
+  //   }
+  // }
 }
 
 console.log(`sticky: ${sticky}`);

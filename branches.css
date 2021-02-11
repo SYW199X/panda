@@ -48,6 +48,9 @@
         flex: 0;
         display: none;
     }
+    .organisation {
+        display: block;
+    }
     .top-floor {
         justify-content: center;
     }
