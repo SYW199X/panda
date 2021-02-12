@@ -45,14 +45,58 @@ function myFunction() {
   // console.log(window.pageYOffset);
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
-    // header.classList.add("header-sticky")
     let str = `calc(${navHeight}px + 20vh)`;
     console.log(`str: ${str}`);
     header.style.height = str;
   } else {
-    // console.log("here");
     navbar.classList.remove("sticky");
-    // header.classList.remove("header-sticky")
     header.style.height = '20vh';
   }
+}
+
+//=================================================
+
+// const navbar = document.querySelector('.nav');
+const links = document.querySelectorAll('.link');
+navbar.addEventListener('mouseover', expand);
+function expand (e) {
+    // e.preventDefault();
+    // console.log("expand")
+    if (e.target.classList.contains('link')) {
+        navbar.removeEventListener('mouseover', expand);
+        const branch = e.target;
+        branch.style.position = 'relative';
+        const menu = document.createElement("div");
+        menu.className = 'branch-menu';
+        menu.innerHTML = '<a href="GF.html">Placeholder</a>';
+        // menu.style.position = 'absolute';
+        // menu.style.bottom = '-100px';
+        // menu.style.left = '0';
+        // menu.style.color = 'black';
+        branch.appendChild(menu);
+        menu.onclick = (e) => e.preventDefault();
+        menu.onmouseover = (e) => branch.classList.toggle('link2');
+        menu.onmouseleave = (e) => branch.classList.toggle('link2');
+        if (document.body.scrollWidth > document.body.clientWidth) menu.classList.add('overwrite');
+    }
+    // e.preventDefault();
+}
+
+links.forEach(a => {
+    a.onmouseleave = (e) => {
+        if (document.querySelector('.branch-menu') != null) {
+            // console.log("remove");
+            document.querySelector('.branch-menu').remove();
+            navbar.addEventListener('mouseover', expand);
+
+        }
+    }
+});
+
+document.onclick = (e) => {
+    if (e.target.className === 'nav') e.preventDefault();
+    if (document.querySelector('.branch-menu') != null && e.target.className != 'branch-menu') {
+        document.querySelector('.branch-menu').remove();
+        navbar.addEventListener('mouseover', expand);
+    }
 }

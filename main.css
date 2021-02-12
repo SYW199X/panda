@@ -90,7 +90,7 @@ body {
 	font-family: "calibri", sans-serif;
 	font-size: 1.2em;
 	text-align: center;
-	margin: 5px;
+	padding: 5px;
 	font-weight: 700;
 	text-decoration: none;
 }
@@ -100,7 +100,49 @@ body {
 }
 
 .nav a:hover {
-	color: rgb(100, 138, 168);
+	/* color: rgb(100, 138, 168); */
+}
+
+.branch-menu {
+	padding: 0 5px 2px 5px;
+	/* text-decoration: none; */
+	/* border: solid 2px darkslategrey; */
+	/* border-top-width: 0; */
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    left: 0px;
+	/* color: #185886; */
+	color: white;
+    box-sizing: border-box;
+    background-color: #69857c;
+	white-space: nowrap;
+	font-size: 1em;
+	/* cursor: pointer; */
+}
+
+.branch-menu a {
+	text-decoration: none;
+	font-size: 1em;
+	color: white;
+}
+
+.overwrite {
+    right: 0px;
+    /* float: right; */
+    /* white-space: normal; */
+    text-align: left;
+}
+
+.link {
+	color: #185886;
+}
+
+.link2:hover {
+    /* color: turquoise; */
+	/* color: black; */
+	color: white;
+    background-color: #69857c;
 }
 
 .content-section {
