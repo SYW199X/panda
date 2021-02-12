@@ -24,6 +24,7 @@
 .organisation {
     display: none;
     align-self: flex-start;
+    margin-bottom: 2vh;
 }
 
 .organisation * {
@@ -35,7 +36,7 @@
 }
 
 .organisation h2 {
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 4vh;
 }
 

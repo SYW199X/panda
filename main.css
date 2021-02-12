@@ -86,7 +86,7 @@ body {
 .nav * {
 	/*display: inline-block;*/
 	width: auto;
-	color: rgb(18, 131, 106);
+	color: darkslategrey;
 	font-family: "calibri", sans-serif;
 	font-size: 1.2em;
 	text-align: center;
@@ -100,7 +100,7 @@ body {
 }
 
 .nav a:hover {
-	color: turquoise;
+	color: rgb(100, 138, 168);
 }
 
 .content-section {
@@ -146,6 +146,12 @@ body {
 @media (max-width: 400px) {
 	.nav * {
 		font-size: 17px;
+	}
+	.sticky {
+		border-top-width: 1px;
+	}
+	.nav {
+		border-bottom-width: 1px;
 	}
 }
 
