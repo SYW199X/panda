@@ -8,6 +8,10 @@ body {
 	font-family: "calibri", sans-serif;
 }
 
+.dropdown {
+	display: none;
+}
+
 .header {
 	/*background-image: url("header.jpg");
 	background-size: cover;
@@ -115,7 +119,7 @@ body {
 	/* color: #185886; */
 	color: white;
     box-sizing: border-box;
-    background-color: #69857c;
+    background-color: #94c2b3;
 	white-space: nowrap;
 	font-size: 1em;
 	/* cursor: pointer; */
