@@ -108,7 +108,8 @@ body {
 }
 
 .branch-menu {
-	padding: 0 8px 2px 8px;
+	padding: 0;
+	margin: 0;
 	/* text-decoration: none; */
 	/* border: solid 2px darkslategrey; */
 	/* border-top-width: 0; */
@@ -127,26 +128,60 @@ body {
 	/* cursor: pointer; */
 }
 
-.branch-menu * {
-	margin: 0;
-	padding: 2px 0px;
-	list-style-type: none;
-	text-align: left;
+.branch-menu ul {
 	font-size: 1em;
+	margin: 0;
+	padding: 0;
 }
 
-.branch-menu a {
-	text-decoration: none;
+.branch-menu li {
+	margin: 0;
+	border-right: solid 3px transparent;
+	border-left: solid 3px transparent;
+	padding: 8px 12px 10px 8px;
+	list-style-type: none;
+	text-align: left;
 	font-size: 1em;
 	color: white;
 }
 
+.branch-menu li:first-child {
+	border-top: solid 2px transparent;
+}
+
+.branch-menu li:last-child {
+	border-bottom: solid 3px transparent;
+}
+
+.branch-menu a {
+	padding: 0;
+	text-decoration: none;
+	font-size: 1em;
+	color: inherit;
+}
+
+.branch-menu li:hover {
+	box-sizing: border-box;
+	background-color: white;
+	color: orange;
+	border-right: solid 3px orange;
+	border-left: solid 3px orange;
+}
+
+.branch-menu li:hover:first-child {
+	border-top: dotted 2px orange;
+}
+
+.branch-menu li:hover:last-child {
+	border-bottom: solid 3px orange;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
 .overwrite {
-	/* position: absolute; */
 	left: auto;
     right: 0px;
     /* white-space: normal; */
-    /* text-align: left; */
 }
 
 .link {
