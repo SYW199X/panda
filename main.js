@@ -59,10 +59,11 @@ function myFunction() {
 // const navbar = document.querySelector('.nav');
 const links = document.querySelectorAll('.link');
 navbar.addEventListener('mouseover', expand);
+navbar.ontouchstart = expand;
 function expand (e) {
     // e.preventDefault();
     // console.log("expand")
-    if (e.target.classList.contains('link')) {
+    if (e.target.classList.contains('link') && !e.target.classList.contains('excl')) {
         navbar.removeEventListener('mouseover', expand);
         const branch = e.target;
         branch.style.position = 'relative';
