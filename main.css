@@ -90,7 +90,7 @@ body {
 .nav * {
 	/*display: inline-block;*/
 	width: auto;
-	color: darkslategrey;
+	color: firebrick;
 	font-family: "calibri", sans-serif;
 	font-size: 1.2em;
 	text-align: center;
@@ -111,8 +111,8 @@ body {
 	padding: 0;
 	margin: 0;
 	box-shadow: 3px 3px 3px dimgrey;
-	border: solid 2px darkslategrey;
-	/* border-top-width: 2px; */
+	border: solid 1px darkslategrey;
+	border-top-width: 2px;
     position: absolute;
     top: 100%;
     z-index: 1;
@@ -168,10 +168,6 @@ body {
     /* white-space: normal; */
 }
 
-.link {
-	color: #185886;
-}
-
 .link:hover {
 	color: darkorange;
 }
@@ -179,10 +175,6 @@ body {
 .link2:hover {
 	color: white;
     background-color: darkorange;
-}
-
-.nav div:hover {
-	color: #185886;
 }
 
 .content-section {

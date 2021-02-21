@@ -63,7 +63,7 @@ navbar.ontouchstart = expand;
 function expand (e) {
     // e.preventDefault();
     // console.log("expand")
-    if (e.target.classList.contains('link') && !e.target.classList.contains('excl')) {
+    if (e.target.classList.contains('link')) {
         navbar.removeEventListener('mouseover', expand);
         const branch = e.target;
         branch.style.position = 'relative';
