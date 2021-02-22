@@ -177,6 +177,11 @@ body {
     background-color: darkorange;
 }
 
+.link3:hover {
+	color: firebrick;
+	background-color: transparent;
+}
+
 .content-section {
 	display: flex;
 	flex-direction: column;
