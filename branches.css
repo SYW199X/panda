@@ -40,6 +40,31 @@
     margin-top: 4vh;
 }
 
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    text-align: center;
+}
+
+.equipment-grid * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 2px red;
+    /* margin: 1px; */
+    /* background-clip: border-box; */
+    /* margin: 0; */
+    /* padding: 0; */
+    height: 100%;
+}
+
+.info-row {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    display: none;
+}
+
 @media (max-width: 800px) {
     .left-buffer {
         flex: 0;

@@ -74,8 +74,12 @@ function expand (e) {
         branch.appendChild(menu);
         [...menu.children[0].children].forEach(item => {
             // console.log(menu.parentElement);
-            let url = menu.parentElement.href;
-            url = url + "/" + item.firstChild.innerHTML.toLowerCase();
+            let url = menu.parentElement.href ? menu.parentElement.href : menu.parentElement.id;
+            let idOrHref = menu.parentElement.href ? true : false;
+            url = idOrHref ? url : window.location.origin + '/' + url;
+            url = url.replace(/\.[^/.]+$/, "")
+            url = url + "-" + item.firstChild.innerHTML.toLowerCase() + '.html';
+            console.log(url)
             item.firstChild.href = url;
         });
         // for (const child of menu.children[0].children) {
