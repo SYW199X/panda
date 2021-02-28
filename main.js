@@ -60,47 +60,45 @@ function myFunction() {
 const links = document.querySelectorAll('.link');
 navbar.addEventListener('mouseover', expand);
 navbar.ontouchstart = expand;
+
+/*
+ * Every HTML page has a hidden pre-made 'dropdown' div
+ * with a ul element containing li elements.
+ * The 'dropdown' div is appended to header navbar items
+ * and its li elements become the dropdown selectable items.
+ */
 function expand (e) {
-    // e.preventDefault();
-    // console.log("expand")
     if (e.target.classList.contains('link')) {
         navbar.removeEventListener('mouseover', expand);
         const branch = e.target;
         branch.style.position = 'relative';
         const menu = document.querySelector('.dropdown');
-        // document.createElement("a");
-        // menu.classList.add = 'branch-menu';
         menu.className = 'branch-menu';
         branch.appendChild(menu);
         [...menu.children[0].children].forEach(item => {
-            // console.log(menu.parentElement);
-            let url = menu.parentElement.href ? menu.parentElement.href : menu.parentElement.id;
-            let idOrHref = menu.parentElement.href ? true : false;
-            url = idOrHref ? url : window.location.origin + '/' + url;
+
+            //Attach a URL to each dropdown item based on parent's href
+            let url = menu.parentElement.getAttribute('href');
             url = url.replace(/\.[^/.]+$/, "")
-            url = url + "-" + item.firstChild.innerHTML.toLowerCase() + '.html';
+            url = url + '/' + item.firstChild.innerHTML.toLowerCase() + '.html';
             console.log(url)
             item.firstChild.href = url;
         });
-        // for (const child of menu.children[0].children) {
-        //     console.log(child);
-        // }
-        // menu.innerHTML = 'Placeholder';
-        // menu.onclick = (e) => {
-        //     e.preventDefault();
-        //     console.log(e.target);
-        // }
+
+        //link2 class sorts out dropdown parent's mouseover highlights
         menu.onmouseover = (e) => branch.classList.toggle('link2');
         menu.onmouseout = (e) => branch.classList.toggle('link2');
+
+        //For the rightmost navbar item, make sure its dropdown doesn't overflow out of the page
+        //If it overflows, add overwrite class which sets right border of parent item as limit
+        //so dropdown menu doesn't exceed it
         if (document.body.scrollWidth > document.body.clientWidth) menu.classList.add('overwrite');
     }
-    // e.preventDefault();
 }
 
 links.forEach(a => {
     a.onmouseleave = (e) => {
         if (document.querySelector('.branch-menu') != null) {
-            // console.log("remove");
             document.querySelector('.branch-menu').classList.toggle('dropdown');
             document.querySelector('.branch-menu').classList.toggle('branch-menu');
             navbar.addEventListener('mouseover', expand);
@@ -108,6 +106,8 @@ links.forEach(a => {
     }
 });
 
+//If dropdown menu doesn't automatically disappear on mouse leave, allow user to manually
+//get rid of it by clicking anywhere on the screen that isn't the dropdown menu or its parent
 document.onclick = (e) => {
     // if (e.target.className === 'nav') e.preventDefault();
     if (document.querySelector('.branch-menu') != null && e.target.className != 'branch-menu') {

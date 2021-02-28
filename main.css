@@ -87,7 +87,7 @@ body {
 	border-top: 2px solid #4E6E64;
 }
 
-.nav * {
+.nav > * {
 	/*display: inline-block;*/
 	width: auto;
 	color: firebrick;
@@ -103,9 +103,6 @@ body {
 	color: #185886;
 }
 
-.nav a:hover {
-	/* color: rgb(100, 138, 168); */
-}
 
 .branch-menu {
 	padding: 0;
@@ -137,23 +134,24 @@ body {
 
 .branch-menu li {
 	margin: 0;
-	padding: 8px 12px 10px 8px;
+	padding: 0;
 	list-style-type: none;
 	text-align: left;
 	font-size: 1em;
 	color: darkorange;
 }
 
-.branch-menu li:last-child {
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
 .branch-menu a {
-	padding: 0;
+	display: block;
+	padding: 8px 12px 10px 8px;
 	text-decoration: none;
 	font-size: 1em;
 	color: inherit;
+}
+
+.branch-menu li:last-child {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 .branch-menu li:hover {

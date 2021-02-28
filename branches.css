@@ -43,8 +43,9 @@
 .equipment-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 100px;
+    grid-auto-rows: 1fr auto;
     text-align: center;
+    height: fit-content;
 }
 
 .equipment-grid * {
@@ -56,12 +57,13 @@
     /* background-clip: border-box; */
     /* margin: 0; */
     /* padding: 0; */
-    height: 100%;
+    /* height: 100%; */
 }
 
 .info-row {
     grid-column-start: 1;
     grid-column-end: 5;
+    /* height: fit-content; */
     display: none;
 }
 
@@ -88,6 +90,6 @@
 @media (max-width: 600px) {
     .left{
         padding: 10px;
-        font-size: ;
+        /* font-size: ; */
     }
 }
