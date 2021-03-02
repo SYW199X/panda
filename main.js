@@ -79,8 +79,8 @@ function expand (e) {
 
             //Attach a URL to each dropdown item based on parent's href
             let url = menu.parentElement.getAttribute('href');
-            url = url.replace(/\.[^/.]+$/, "")
-            url = url + '/' + item.firstChild.innerHTML.toLowerCase() + '.html';
+            url = url.replace(/\.[^/.]+$/, "");
+            url = url + '-' + item.firstChild.innerHTML.toLowerCase() + '.html';
             console.log(url)
             item.firstChild.href = url;
         });

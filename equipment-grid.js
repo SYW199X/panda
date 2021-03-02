@@ -23,11 +23,16 @@ function GridModule() {
      * display the images in the grid element.
      */
     useEffect(() => {
-        const dir = domContainer.getAttribute('dir');
+        const subDir = domContainer.getAttribute('dir');
+        let dir = window.location.pathname.split('').reverse().join('');
+        // dir = dir.toString().split('-');
+        dir = dir.split('-')[1].split('/')[0].split('').reverse().join('');
+        console.log(dir);
+        // dir = dir.split('-')[1].split('/')[0];
         const img = [];
         let i = 0;
         for(i=0;i<3;i++) {
-            img[i] = `${dir}/${i+1}.jpg`
+            img[i] = `${dir}/${subDir}/${i+1}.jpg`
         }
         urlIs(img);
         keepWaiting(false);

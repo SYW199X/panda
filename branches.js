@@ -9,7 +9,7 @@ function adjust() {
         let width = grid.firstElementChild.offsetWidth;
         // console.log(width);
         // grid.style.gridAutoRows = `${width}px`;
-        grid.firstElementChild.style.height = `${width}px`;
+        grid.firstElementChild.style.height = `${width*0.8}px`;
     }
 }
 
