@@ -5,7 +5,7 @@
     grid-auto-rows: 1fr auto;
     text-align: center;
     height: fit-content;
-    border: solid 1px darkslateblue;
+    border: solid 1px darkslategrey;
 }
 
 .equipment-grid > * {
@@ -25,7 +25,7 @@
     grid-column-end: 5;
     /* height: fit-content; */
     display: none;
-    border-top: solid 2px darkslateblue;
+    border-top: solid 1px darkslategrey;
 }
 
 .grid-picture {
