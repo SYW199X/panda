@@ -22,10 +22,6 @@
     /* height: 100%; */
 }
 
-.equipment-grid:first-child {
-    border-left: none;
-}
-
 .info-row {
     grid-column-start: 1;
     grid-column-end: 5;
@@ -48,14 +44,21 @@
     color: white;
     font-weight: 700;
     background-color: #69857c;
+    border-left: none;
 }
 
 @media (max-width: 600px) {
     .equipment-grid {
         grid-template-columns: repeat(3, 1fr);
+        border-top: solid 1px darkslategrey;
+    }
+    .equipment-grid > * {
+        border-left: solid 1px darkslategrey;
+    }
+    .root-grid {
+        border-left: none;
     }
     .third-pic {
-
         display: none;
     }
 }
