@@ -5,7 +5,8 @@
     grid-auto-rows: 1fr auto;
     text-align: center;
     height: fit-content;
-    border: solid 1px darkslategrey;
+    border-top: solid 2px darkslategrey;
+    /* border-bottom: solid 2px darkslategrey; */
 }
 
 .equipment-grid > * {
@@ -17,7 +18,12 @@
     /* background-clip: border-box; */
     margin: 0;
     padding: 0;
+    border-left: solid 2px darkslategrey;
     /* height: 100%; */
+}
+
+.equipment-grid:first-child {
+    border-left: none;
 }
 
 .info-row {
@@ -25,7 +31,8 @@
     grid-column-end: 5;
     /* height: fit-content; */
     display: none;
-    border-top: solid 1px darkslategrey;
+    border-left: none;
+    border-top: solid 4px lightcoral;
 }
 
 .grid-picture {
@@ -43,7 +50,7 @@
     background-color: #69857c;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .equipment-grid {
         grid-template-columns: repeat(3, 1fr);
     }

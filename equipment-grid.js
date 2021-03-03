@@ -1,9 +1,10 @@
 const {useState, useEffect} = React;
 
-function GridModule() {
+function GridModule({text, elemDir}) {
     const [out, popped] = useState(false);
     const [wait, keepWaiting] = useState(true);
     const [url, urlIs] = useState([]);
+    // const [text, getText] = useState('');
 
     const displayInfo = (e) => {
         const grid = e.target.parentElement;
@@ -23,24 +24,24 @@ function GridModule() {
      * display the images in the grid element.
      */
     useEffect(() => {
-        const subDir = domContainer.getAttribute('dir');
+        // const subDir = domContainer.getAttribute('dir');
+        const subDir = elemDir;
         let dir = window.location.pathname.split('').reverse().join('');
-        // dir = dir.toString().split('-');
         dir = dir.split('-')[1].split('/')[0].split('').reverse().join('');
         console.log(dir);
-        // dir = dir.split('-')[1].split('/')[0];
         const img = [];
         let i = 0;
         for(i=0;i<3;i++) {
             img[i] = `${dir}/${subDir}/${i+1}.jpg`
         }
+        // getText(domContainer.getAttribute('text'))
         urlIs(img);
         keepWaiting(false);
     }, []);
 
     return ( wait ? <div>Loading...</div> :
         <React.Fragment>
-            <div className='root-grid' onClick={(e)=> displayInfo(e)}>{domContainer.getAttribute('text')}</div>
+            <div className='root-grid' onClick={(e)=> displayInfo(e)}>{text}</div>
             <a><img src={url[0]} className='grid-picture'/></a>
             <a><img src={url[1]} className='grid-picture'/></a>
             <a><img src={url[2]} className='grid-picture third-pic'/></a>
@@ -49,5 +50,8 @@ function GridModule() {
     );
 }
 
-const domContainer = document.querySelector('.equipment-grid');
-ReactDOM.render(<GridModule />, domContainer);
+const domContainers = document.querySelectorAll('.equipment-grid')
+    .forEach(domContainer => {
+        ReactDOM.render(<GridModule elemDir={domContainer.getAttribute('dir')} 
+            text={domContainer.getAttribute('text')}/>, domContainer);
+    })
