@@ -50,15 +50,20 @@
 @media (max-width: 600px) {
     .equipment-grid {
         grid-template-columns: repeat(3, 1fr);
-        border-top: solid 1px darkslategrey;
-    }
-    .equipment-grid > * {
-        border-left: solid 1px darkslategrey;
-    }
-    .root-grid {
-        border-left: none;
     }
     .third-pic {
         display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .equipment-grid {
+        border-top-width: 1px;
+    }
+    .equipment-grid > * {
+        border-left-width: 1px;
+    }
+    .root-grid {
+        border-left: none;
     }
 }
