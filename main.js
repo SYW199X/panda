@@ -89,6 +89,8 @@ function expand (e) {
         menu.onmouseover = (e) => branch.classList.toggle('link2');
         menu.onmouseout = (e) => branch.classList.toggle('link2');
 
+        branch.onmouseout = (e) => branch.removeAttribute('style');
+
         //For the rightmost navbar item, make sure its dropdown doesn't overflow out of the page
         //If it overflows, add overwrite class which sets right border of parent item as limit
         //so dropdown menu doesn't exceed it

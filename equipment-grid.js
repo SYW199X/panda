@@ -15,6 +15,35 @@ function GridModule({text, elemDir}) {
         }
         popped(!out);
     }
+
+    const getOrigImg = (e, img) => {
+
+        //Create anchor element with URL linking to original resolution image
+        //Append it to an anchor parent since image element children
+        //don't show up for some reason
+        e.target.parentElement.style.position = 'relative';
+        const fullSizeIcon = document.createElement('a');
+        let num = img.search(/\/.\./);
+        img = img.replace(img[num+1], `${img[num+1]}-orig`);
+        fullSizeIcon.href = img;
+        fullSizeIcon.target = '_blank';
+        fullSizeIcon.className = 'full-size-icon';
+        fullSizeIcon.style.width = `${e.target.clientWidth/3}px`;
+        e.target.parentElement.appendChild(fullSizeIcon);
+        
+        //Create icon and insert into anchor element created above
+        const icon = document.createElement('img');
+        icon.setAttribute('src', 'zoom.png');
+        icon.setAttribute('class', 'zoom-icon')
+        fullSizeIcon.appendChild(icon);
+    }
+
+    const removeIcon = (e) => {
+        document.querySelectorAll('.full-size-icon').forEach(icon => {
+            icon.parentElement.removeAttribute('style');
+            icon.remove()
+        });
+    }
     
     /*
      * index.HTML element has a 'dir' attribute which informs React
@@ -34,6 +63,7 @@ function GridModule({text, elemDir}) {
         for(i=0;i<3;i++) {
             img[i] = `${dir}/${subDir}/${i+1}.jpg`
         }
+
         // getText(domContainer.getAttribute('text'))
         urlIs(img);
         keepWaiting(false);
@@ -42,9 +72,16 @@ function GridModule({text, elemDir}) {
     return ( wait ? <div>Loading...</div> :
         <React.Fragment>
             <div className='root-grid' onClick={(e)=> displayInfo(e)}>{text}</div>
-            <a><img src={url[0]} className='grid-picture'/></a>
-            <a><img src={url[1]} className='grid-picture'/></a>
-            <a><img src={url[2]} className='grid-picture third-pic'/></a>
+            <a onMouseLeave ={(e) => removeIcon(e)}>
+                <img src={url[0]} className='grid-picture' onMouseEnter={(e) => getOrigImg(e, url[0])}/>
+            </a>
+            <a onMouseLeave ={(e) => removeIcon(e)}>
+                <img src={url[1]} className='grid-picture' onMouseEnter={(e) => getOrigImg(e, url[0])}/>
+            </a>
+            <a onMouseLeave ={(e) => removeIcon(e)}>
+                <img src={url[2]} className='grid-picture third-pic' 
+                onMouseEnter={(e) => getOrigImg(e, url[0])}/>
+            </a>
             <a className='info-row'>e</a>
         </React.Fragment>
     );
@@ -55,3 +92,7 @@ const domContainers = document.querySelectorAll('.equipment-grid')
         ReactDOM.render(<GridModule elemDir={domContainer.getAttribute('dir')} 
             text={domContainer.getAttribute('text')}/>, domContainer);
     })
+
+// document.onmousemove = (e) => {
+//     console.log(e.target)
+// }

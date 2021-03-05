@@ -37,6 +37,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    /* object-fit: scale-down; */
 }
 
 .root-grid {
@@ -45,6 +46,20 @@
     font-weight: 700;
     background-color: #69857c;
     border-left: none;
+}
+
+.full-size-icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    /* border: solid 5px red; */
+    z-index: 9000;
+}
+
+.full-size-icon > * {
+    height: 100%;
+    width: 100%;
 }
 
 @media (max-width: 600px) {
