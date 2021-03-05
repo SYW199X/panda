@@ -85,6 +85,7 @@ body {
 	position: fixed;
 	top: 0;
 	border-top: 2px solid #4E6E64;
+	z-index: 1;
 }
 
 .nav > * {

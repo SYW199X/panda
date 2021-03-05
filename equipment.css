@@ -54,7 +54,7 @@
     right: 0px;
     cursor: pointer;
     /* border: solid 5px red; */
-    z-index: 9000;
+    /* z-index: 9000; */
 }
 
 .full-size-icon > * {

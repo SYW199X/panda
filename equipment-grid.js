@@ -4,7 +4,6 @@ function GridModule({text, elemDir}) {
     const [out, popped] = useState(false);
     const [wait, keepWaiting] = useState(true);
     const [url, urlIs] = useState([]);
-    // const [text, getText] = useState('');
 
     const displayInfo = (e) => {
         const grid = e.target.parentElement;
@@ -64,7 +63,6 @@ function GridModule({text, elemDir}) {
             img[i] = `${dir}/${subDir}/${i+1}.jpg`
         }
 
-        // getText(domContainer.getAttribute('text'))
         urlIs(img);
         keepWaiting(false);
     }, []);
@@ -82,7 +80,7 @@ function GridModule({text, elemDir}) {
                 <img src={url[2]} className='grid-picture third-pic' 
                 onMouseEnter={(e) => getOrigImg(e, url[0])}/>
             </a>
-            <a className='info-row'>e</a>
+            <a className='info-row'>Additional systems + info section</a>
         </React.Fragment>
     );
 }
@@ -92,7 +90,3 @@ const domContainers = document.querySelectorAll('.equipment-grid')
         ReactDOM.render(<GridModule elemDir={domContainer.getAttribute('dir')} 
             text={domContainer.getAttribute('text')}/>, domContainer);
     })
-
-// document.onmousemove = (e) => {
-//     console.log(e.target)
-// }
