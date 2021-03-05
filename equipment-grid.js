@@ -71,11 +71,11 @@ function GridModule({text, elemDir}) {
                 <img src={url[0]} className='grid-picture' onMouseEnter={(e) => getOrigImg(e, url[0])}/>
             </a>
             <a onMouseLeave ={(e) => removeIcon(e)}>
-                <img src={url[1]} className='grid-picture' onMouseEnter={(e) => getOrigImg(e, url[0])}/>
+                <img src={url[1]} className='grid-picture' onMouseEnter={(e) => getOrigImg(e, url[1])}/>
             </a>
             <a onMouseLeave ={(e) => removeIcon(e)}>
                 <img src={url[2]} className='grid-picture third-pic' 
-                onMouseEnter={(e) => getOrigImg(e, url[0])}/>
+                onMouseEnter={(e) => getOrigImg(e, url[2])}/>
             </a>
             <a className='info-row'>Additional systems + info section</a>
         </React.Fragment>
