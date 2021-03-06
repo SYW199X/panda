@@ -6,7 +6,7 @@ function GridModule({text, elemDir}) {
     const [url, urlIs] = useState([]);
 
     const displayInfo = (e) => {
-        const grid = e.target.parentElement;
+        const grid = e.currentTarget.parentElement;
         if (!out) {
             grid.lastChild.style.display = 'block';
         } else {
@@ -19,7 +19,7 @@ function GridModule({text, elemDir}) {
         // Create anchor element with URL linking to original 
         // resolution image. Append it to an anchor parent because 
         // image element children don't show up for some reason
-        const parent = e.target.parentElement;
+        const parent = e.currentTarget;
         parent.style.position = 'relative';
         const fullSizeIcon = document.createElement('a');
         
@@ -31,7 +31,7 @@ function GridModule({text, elemDir}) {
 
         fullSizeIcon.className = 'full-size-icon';
         fullSizeIcon.target = '_blank';
-        fullSizeIcon.style.width = `${e.target.clientWidth/3}px`;
+        fullSizeIcon.style.width = `${e.currentTarget.clientWidth/3}px`;
         parent.appendChild(fullSizeIcon);
                 
         // Create icon and insert into anchor element created above
@@ -43,8 +43,8 @@ function GridModule({text, elemDir}) {
         const moreInfo = document.createElement('a');
         moreInfo.className = 'equipment-article';
         moreInfo.href = img.replace(/(?<=\.)\w+$/, 'html');
-        moreInfo.style.height = `${e.target.clientHeight/3}px`;
-        moreInfo.style.width = `${e.target.clientWidth}px`;
+        moreInfo.style.height = `${e.currentTarget.clientHeight/3}px`;
+        moreInfo.style.width = `${e.currentTarget.clientWidth}px`;
         moreInfo.innerHTML = 'Read More';
         parent.appendChild(moreInfo);
     }
