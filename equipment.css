@@ -72,7 +72,7 @@
     bottom: 0px;
     left: 0px;
     cursor: pointer;
-    font-size: 2em;
+    font-size: clamp(10px, 4vw, 3em);
     font-weight: 700;
     text-decoration: none;
     color: white;
