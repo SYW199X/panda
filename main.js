@@ -77,8 +77,11 @@ function expand (e) {
         [...menu.children[0].children].forEach(item => {
 
             //Attach a URL to each dropdown item based on parent's href
-            let url = menu.parentElement.getAttribute('href');
-            url = url.replace(/\.[^/.]+$/, "");
+            const parentURL = menu.parentElement.getAttribute('href');
+            let pathBack = parentURL.match(/(?<!\w)[./]+?(?=\w)/);//"../" stuff if applicable
+            let url = parentURL.match(/[^/.]+\.[^/.]+$/);//Actual URL
+            url = url[0].replace(/\.[^/.]+$/, "");//Take off ".html"
+            url = pathBack ? pathBack + url : url;
             url = url + '-' + item.firstChild.innerHTML.toLowerCase() + '.html';
             item.firstChild.href = url;
         });
