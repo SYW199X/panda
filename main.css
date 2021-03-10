@@ -287,8 +287,18 @@ body {
 	margin: 20vh 0 0 0;
 	height: 120px;
 	color: beige;
+	position: fixed;
+	top: 100%;
 	background-color: #69857c;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.sticky-footer {
+	width: 100%;
+	/* position: fixed; */
+	top: auto;
+	bottom: 0;
+	z-index: 1;
 }

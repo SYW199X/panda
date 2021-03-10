@@ -1,4 +1,9 @@
-window.onscroll = function() {myFunction()};
+//========================================================
+// This section creates sticky navbar that stays at top of screen
+// when the page is scrolled down
+
+// window.onscroll = function() {stickyNav()};
+window.onscroll = stickyNav;
 
 const navbar = document.querySelector(".nav");
 const header = document.querySelector('.logo-text');
@@ -14,7 +19,7 @@ window.onresize = () => {
 
 // Add the sticky class to the navbar when you reach its scroll position. 
 // Remove "sticky" when you leave the scroll position
-function myFunction() {
+function stickyNav() {
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky")
         let str = `calc(${navHeight}px + 20vh)`;
@@ -53,7 +58,8 @@ function myFunction() {
 //     }
 // }
 
-//=================================================
+//============================================================
+// This section does the navbar dropdown menu rendering and hyperlink generation
 
 // const navbar = document.querySelector('.nav');
 const links = document.querySelectorAll('.link');
@@ -110,11 +116,31 @@ links.forEach(a => {
 //If dropdown menu doesn't automatically disappear on mouse leave, allow user to manually
 //get rid of it by clicking anywhere on the screen that isn't the dropdown menu or its parent
 document.onclick = (e) => {
-    // if (e.target.className === 'nav') e.preventDefault();
     if (document.querySelector('.branch-menu') != null && e.target.className != 'branch-menu') {
-        // document.querySelector('.branch-menu').remove();
         document.querySelector('.branch-menu').classList.toggle('dropdown');
         document.querySelector('.branch-menu').classList.toggle('branch-menu');
         navbar.addEventListener('mouseover', expand);
     }
+}
+
+//===============================================
+// This ensures footer is always either at the bottom of the screen or bottom of page
+// The distinction becomes relevant whenever a page is too short to extend the entire 
+// height of the screen
+
+let observer = new MutationObserver(footerStuff);
+observer.observe(document.documentElement, {childList: true, subtree: true, attributes: true});
+function footerStuff (e) {
+    const footerElem = document.querySelector('.footer');
+    const marginHeight = window.getComputedStyle(footerElem, null).getPropertyValue('margin-top')
+    const actualHeight = document.body.clientHeight + footerElem.clientHeight + marginHeight;
+    observer.disconnect();
+    if (actualHeight < window.innerHeight) {
+        footerElem.style.position = 'fixed';
+        footerElem.classList.add('sticky-footer');
+    } else {
+        footerElem.classList.remove('sticky-footer');
+        footerElem.style.position = 'static';
+    }
+    observer.observe(document.documentElement, {childList: true, subtree: true, attributes: true});
 }

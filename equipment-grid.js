@@ -23,7 +23,7 @@ function GridModule({text, elemDir}) {
         parent.style.position = 'relative';
         const fullSizeIcon = document.createElement('a');
         
-        // Get index of image number in URL
+        // Get index of image number in URL string
         let num = img.search(/\/.\./);
 
         // Replace number with number-orig e.g. 1.jpg becomes 1-orig.jpg
@@ -39,7 +39,7 @@ function GridModule({text, elemDir}) {
         icon.setAttribute('src', 'zoom.png');
         fullSizeIcon.appendChild(icon);
 
-        // Create anchor element linking to dedicated equipment article
+        // Create anchor element linking to specific equipment article
         const moreInfo = document.createElement('a');
         moreInfo.className = 'equipment-article';
         moreInfo.href = img.replace(/(?<=\.)\w+$/, 'html');
@@ -64,7 +64,7 @@ function GridModule({text, elemDir}) {
      * index.HTML element has a 'dir' attribute (elemDir below) 
      * which informs React which equipment directory to access. 
      * Inside the directory are jpg files that are consecutively 
-     * enumerated 1.jpg, 2.jpg, 3.jpg. React* is to access these jpg
+     * enumerated 1.jpg, 2.jpg, 3.jpg. React is to access these jpg
      * files from the specified directory and display the images in 
      * the grid element. The equipment directory is a subfolder of
      * the branch folder which the 'dir' methods below will identify.
@@ -88,7 +88,8 @@ function GridModule({text, elemDir}) {
         keepWaiting(false);
     }, []);
 
-    return ( wait ? <div>Loading...</div> :
+    return ( wait ? <div>Loading...</div>
+    :
         <React.Fragment>
             <div className='root-grid' onClick={(e)=> displayInfo(e)}>{text}</div>
             <a onMouseLeave ={(e) => removeIcon(e)} onMouseEnter={(e) => getOrigImg(e, url[0])}>
