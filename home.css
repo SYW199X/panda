@@ -4,7 +4,7 @@
 	flex-direction: column;
 	font-size: 1.1em;
 	text-align: justify;
-	padding:  2vh 3vw 0 5vw;
+	padding:  10vh 3vw 0 5vw;
 	min-width: 600px;
     align-items: center;
     box-sizing: border-box;
@@ -17,15 +17,14 @@
 }
 
 .post-section {
-	margin: 5vh 0 0 0;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 }
 
 .post {
-	margin: calc(10px + 3vh) 0 0 0;
 	height: 210px;
+	margin-bottom: calc(10px + 3vh);
 	/* border: 2px solid lightgrey;*/
 	/* border-radius: 10px; */
 	/* border-bottom: 2px solid #4E6E64; */
@@ -106,14 +105,16 @@
 
 .centre-home {
 	flex: 2;
-	padding: 0 1vw;
-	border-radius: 10px;
+	padding: 0 1vw 1vw 1vw;
+	border-radius: 5px;
+	height: fit-content;
 	/*border-top: 5vh solid white;*/
-	margin: 5vh 3vmax 0 0.5vmax;
+	margin: 10vh 3vmax 0 0.5vmax;
 	font-family: "calibri", sans-serif;
 	font-size: 1em;
-	color: navy;
+	color: white;
 	text-align: center;
+	background-color: #69857c;
 }
 
 @media (max-width: 800px) {
@@ -145,8 +146,8 @@
 }
 
 .search-section {
-	background-color: lightgrey;
-	margin: 7vh 0 10vh 0;
+	/* background-color: lightgrey; */
+	margin-bottom: 5vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -190,4 +191,9 @@
 
 #searchButton:hover {
 	cursor: pointer;
+}
+
+.twitter-container {
+	border-radius: 5px;
+	box-sizing: border-box;
 }

@@ -92,6 +92,7 @@ body {
 .nav > * {
 	/*display: inline-block;*/
 	flex: 1;
+	flex-basis: auto;
 	width: auto;
 	color: firebrick;
 	font-size: 1.2em;
@@ -271,14 +272,6 @@ body {
 .left p {
 	margin: 0 0 1vmax 0;
 	font-weight: 400;
-}
-
-.twitter-container {
-	/* border: 1px solid black; */
-	border-radius: 5px;
-	box-sizing: border-box;
-	border: 10px solid lightgrey;
-	margin: 1vh 0 0 0;
 }
 
 /* .right-home {
