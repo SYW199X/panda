@@ -1,3 +1,9 @@
+.content-section > h3 {
+    text-align: center;
+    font-size: clamp(16px, 4vw, 2em);
+    color: darkslategrey;
+}
+
 .equipment-grid {
     align-self: center;
     display: grid;
@@ -41,9 +47,10 @@
 
 .root-grid {
     padding: 0 10px;
-    font-size: clamp(10px, 4vw, 2.5em);
+    /* font-size: clamp(10px, 4vw, 2.5em); */
+    font-size: clamp(10px, 4vw, 2em);
     color: white;
-    font-weight: 700;
+    font-weight: 400;
     background-color: #69857c;
     border-left: none;
 }
@@ -74,8 +81,8 @@
     bottom: 0px;
     left: 0px;
     cursor: pointer;
-    font-size: clamp(10px, 4vw, 2em);
-    font-weight: 700;
+    font-size: clamp(10px, 4vw, 1.5em);
+    font-weight: 400;
     text-decoration: none;
     color: white;
     background-color: #69857cc0;

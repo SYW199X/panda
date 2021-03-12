@@ -76,8 +76,9 @@ function expand (e) {
     if (e.target.classList.contains('link')) {
         navbar.removeEventListener('mouseover', expand);
         const branch = e.target;
-        branch.style.position = 'relative';
         const menu = document.querySelector('.dropdown');
+        branch.style.position = 'relative';
+        menu.style.width = window.getComputedStyle(branch).getPropertyValue('width');
         menu.className = 'branch-menu';
         branch.appendChild(menu);
         [...menu.children[0].children].forEach(item => {
@@ -128,11 +129,15 @@ document.onclick = (e) => {
 // The distinction becomes relevant whenever a page is too short to extend the entire 
 // height of the screen
 
+setTimeout((e) => {
+    footerStuff(e);
+}, 2000);
+
 let observer = new MutationObserver(footerStuff);
 observer.observe(document.documentElement, {childList: true, subtree: true, attributes: true});
 function footerStuff (e) {
     const footerElem = document.querySelector('.footer');
-    const marginHeight = window.getComputedStyle(footerElem, null).getPropertyValue('margin-top')
+    const marginHeight = parseInt(window.getComputedStyle(footerElem, null).getPropertyValue('margin-top'));
     const actualHeight = document.body.clientHeight + footerElem.clientHeight + marginHeight;
     observer.disconnect();
     if (actualHeight < window.innerHeight) {
@@ -144,3 +149,5 @@ function footerStuff (e) {
     }
     observer.observe(document.documentElement, {childList: true, subtree: true, attributes: true});
 }
+
+//=================================================

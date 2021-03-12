@@ -114,6 +114,7 @@
 	font-size: 1em;
 	color: navy;
 	text-align: center;
+	background-color: #69857c;
 }
 
 @media (max-width: 800px) {

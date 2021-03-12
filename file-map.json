@@ -1,0 +1,116 @@
+[{
+    "branch": "GF",
+    "map": [
+        {
+            "type":"DF",
+            "systems": {
+                "1":"ZTZ99A",
+                "2":"ZTQ15",
+                "3":"ZLT11"
+            }
+        },
+        {
+            "type":"IFV",
+            "systems": {
+                "1":"ZBD04A",
+                "2":"ZBD04",
+                "3":"ZBL08"
+            }
+        },
+        {
+            "type":"SPG",
+            "systems": {
+                "1":"PLZ05",
+                "2":"PCL181",
+                "3":"PLZ07"
+            }
+        },
+        {
+            "type":"Rocket",
+            "systems": {
+                "1":"PHZ10",
+                "2":"AFT10",
+                "3":"PCH191"
+            }
+        },
+        {
+            "type":"Gats",
+            "systems": {
+                "1":"QBZ95",
+                "2":"QBZ191",
+                "3":"CS/LR4"
+            }
+        }
+    ]
+},
+{
+    "branch": "navy",
+    "map": [
+        {
+            "type":"DDG",
+            "systems": {
+                "1":"055",
+                "2":"052D",
+                "3":"052C"
+            }
+        },
+        {
+            "type":"FFG",
+            "systems": {
+                "1":"054A",
+                "2":"056",
+                "3":"053H3"
+            }
+        },
+        {
+            "type":"Amphibs",
+            "systems": {
+                "1":"075",
+                "2":"071",
+                "3":"072"
+            }
+        }
+    ]
+},
+{
+    "branch": "AF",
+    "map": [
+        {
+            "type":"F",
+            "systems": {
+                "1":"J-20",
+                "2":"J-16",
+                "3":"J-10C"
+            }
+        },
+        {
+            "type":"B",
+            "systems": {
+                "1":"H-6K/J/N",
+                "2":"JH-7",
+                "3":"Su-30MKK/MK2"
+            }
+        }
+    ]
+},
+{
+    "branch": "RF",
+    "map": [
+        {
+            "type":"strategic",
+            "systems": {
+                "1":"DF-41",
+                "2":"DF-5",
+                "3":"DF-31"
+            }
+        },
+        {
+            "type":"tactical",
+            "systems": {
+                "1":"DF-26",
+                "2":"DF-100",
+                "3":"DF-17"
+            }
+        }
+    ]
+}]
