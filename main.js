@@ -149,5 +149,3 @@ function footerStuff (e) {
     }
     observer.observe(document.documentElement, {childList: true, subtree: true, attributes: true});
 }
-
-//=================================================

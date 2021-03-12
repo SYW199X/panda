@@ -22,7 +22,7 @@ function GridModule({text, elemDir}) {
         .split('-')[1].split('/')[0].split('').reverse().join('');
     }
 
-    const getOrigImg = (e, imgUrl, squareNum) => {
+    const overlayLinks = (e, imgUrl, squareNum) => {
         // Create anchor element with URL linking to original 
         // resolution image. Append it to an anchor parent because 
         // image element children don't show up for some reason
@@ -49,14 +49,14 @@ function GridModule({text, elemDir}) {
         // checking which equipment type corresponds to which square in the
         // equipment grid as defined by the file-map.json file
         const clickForMainArticle = document.createElement('a');
-        clickForMainArticle.className = 'equipment-article';
-        // clickForMainArticle.href = imgUrl.replace(/(?<=\.)\w+$/, 'html');
-        clickForMainArticle.style.height = `${e.currentTarget.clientHeight/3}px`;
-        clickForMainArticle.style.width = `${e.currentTarget.clientWidth}px`;
-
         let branchDir = extractBranchDir(window.location.pathname);
         let parsedMap = [];
         let squareArticlePairing = {};
+
+        clickForMainArticle.className = 'equipment-article';
+        clickForMainArticle.style.height = `${e.currentTarget.clientHeight/3}px`;
+        clickForMainArticle.style.width = `${e.currentTarget.clientWidth}px`;
+        // clickForMainArticle.href = imgUrl.replace(/(?<=\.)\w+$/, 'html');
 
         jsonMap.map(branches => {
             if (branches.branch == branchDir) parsedMap = branches.map;
@@ -65,12 +65,12 @@ function GridModule({text, elemDir}) {
             if (pairing.type == elemDir) squareArticlePairing = pairing.systems;
         });
         clickForMainArticle.href = imgUrl.replace(/(?<=\/)[.\w]+$/, 
-                                `${squareArticlePairing[squareNum]}.html`);
+                                            `${squareArticlePairing[squareNum]}.html`);
         clickForMainArticle.innerHTML = squareArticlePairing[squareNum];
         parent.appendChild(clickForMainArticle);
     }
 
-    const removeIcon = (e) => {
+    const removeOverlay = (e) => {
         document.querySelectorAll('.equipment-article').forEach(link => {
             link.parentElement.removeAttribute('style');
             link.remove();
@@ -120,13 +120,13 @@ function GridModule({text, elemDir}) {
     :
         <React.Fragment>
             <div className='root-grid' onClick={(e)=> displayInfo(e)}>{text}</div>
-            <a onMouseLeave ={(e) => removeIcon(e)} onMouseEnter={(e) => getOrigImg(e, url[0], 1)}>
+            <a onMouseLeave ={(e) => removeOverlay(e)} onMouseEnter={(e) => overlayLinks(e, url[0], 1)}>
                 <img src={url[0]} className='grid-picture'/>
             </a>
-            <a onMouseLeave ={(e) => removeIcon(e)} onMouseEnter={(e) => getOrigImg(e, url[1], 2)}>
+            <a onMouseLeave ={(e) => removeOverlay(e)} onMouseEnter={(e) => overlayLinks(e, url[1], 2)}>
                 <img src={url[1]} className='grid-picture'/>
             </a>
-            <a onMouseLeave ={(e) => removeIcon(e)} onMouseEnter={(e) => getOrigImg(e, url[2], 3)}>
+            <a onMouseLeave ={(e) => removeOverlay(e)} onMouseEnter={(e) => overlayLinks(e, url[2], 3)}>
                 <img src={url[2]} className='grid-picture third-pic'/>
             </a>
             <a className='info-row'>Additional systems + info section</a>
